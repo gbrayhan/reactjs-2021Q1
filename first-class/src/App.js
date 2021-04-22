@@ -1,5 +1,5 @@
-import './App.css';
-import React from 'react'
+import "./App.css";
+import React from "react";
 import StyledComponent from "./component/StyledComponent";
 
 const Person = (props) => {
@@ -16,18 +16,16 @@ const Person = (props) => {
 
 const Hello = () => <h2>Hello there!</h2>;
 
-
 export default function App() {
   return (
     <div className="App">
-      <Hello/>
+      <Hello />
       <Person
         name="Ilse Pamela"
         emai="jordan@twitter.com"
         phone="+52 5544332288"
       />
-      <StyledComponent/>
+      <StyledComponent />
     </div>
   );
 }
-

@@ -1,33 +1,30 @@
-it('description', () => {
+it("description", () => {
   expect(true).toBe(true);
 });
 
-it('description dos', () => {
+it("description dos", () => {
   expect(true).toBe(true);
 });
 
-
-it('description tres', () => {
+it("description tres", () => {
   expect(true).toBe(true);
 });
-
 
 describe("group describe uno", () => {
-  it('description', () => {
+  it("description", () => {
     expect(true).toBe(true);
   });
 
-  it('description dos', () => {
+  it("description dos", () => {
     expect(true).toBe(true);
   });
 
-
-  it('description tres', () => {
+  it("description tres", () => {
     expect(true).toBe(true);
   });
 
-  it('string', () => {
-    expect("F-0009934").toMatch(/F\-+[0-9]{6,12}/)
-    expect("F-0009934-SUCCESS").not.toMatch(/ERROR/)
+  it("string", () => {
+    expect("F-0009934").toMatch(/F\-+[0-9]{6,12}/);
+    expect("F-0009934-SUCCESS").not.toMatch(/ERROR/);
   });
 });

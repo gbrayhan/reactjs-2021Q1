@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 const Button = styled.button`
   min-height: 2rem;
   border: 0;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   min-width: 10rem;
   background-color: #61dafb;
   text-decoration: none;
@@ -23,5 +23,5 @@ export default function StyledComponent() {
       <Button>Update</Button>
       <Button>Remove</Button>
     </MultiButton>
-  )
+  );
 }
