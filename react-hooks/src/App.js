@@ -1,13 +1,11 @@
 import React from "react";
-import PokemonDetailClass from "./components/PokemonDetail/PokemonDetailClass";
-import PokemonDetailHook from "./components/PokemonDetail/PokemonDetailHook";
+import CopyApp from "./pages/FocusUseRef/CopyApp";
 
 function App() {
+
   return (
     <>
-      <PokemonDetailClass selectedPokemon={"eevee"} />
-      <PokemonDetailHook selectedPokemon={"jolteon"} />
-      <PokemonDetailHook selectedPokemon={"pikachu"} />
+      <CopyApp/>
     </>
   );
 }

@@ -6,41 +6,14 @@ import {
   ImagePoke,
   TitleCard,
 } from "./PokemonDetail.styled";
+import usePokeApi from "../../hooks/usePokeApi";
 
 const PokemonDetailHook = (props) => {
-  const [loading, setLoading] = useState(true);
-  const [pokemon, setPokemon] = useState({});
-
-  const fetchData = async () => {
-    setLoading(true);
-    try {
-      const response = await fetch(
-        `https://pokeapi.co/api/v2/pokemon/${props.selectedPokemon}`
-      );
-
-      const pokeData = await response.json();
-      const loadedPokemon = {
-        image: `https://img.pokemondb.net/artwork/large/${pokeData.name}.jpg`,
-        name: pokeData.name,
-        height: pokeData.height,
-        weight: pokeData.weight,
-        type: pokeData.types[0].type.name,
-        movesCount: pokeData.moves.length,
-      };
-      setLoading(false);
-      setPokemon(loadedPokemon);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    fetchData().then(() => {});
-  });
-
+  const url = `https://pokeapi.co/api/v2/pokemon/${props.selectedPokemon}`;
+  const [loading, pokemon] = usePokeApi(url, false)
   return (
     <>
-      {loading && (
+      {!loading && (
         <CardDetails>
           <TitleCard>{pokemon.name}</TitleCard>
           <ContainerImage>
