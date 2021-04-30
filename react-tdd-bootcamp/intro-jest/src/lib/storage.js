@@ -1,8 +1,8 @@
 export const storage = {
-  save ({ key, value }) {
+  save({ key, value }) {
     return localStorage.setItem(key, value);
   },
-  get ({ key }) {
+  get({ key }) {
     return localStorage.getItem(key);
-  }
-}
+  },
+};

@@ -1,11 +1,10 @@
 import React from "react";
-import ScrollAnimation from "./pages/UseRef/ScrollAnimation";
+import LoadingApp from "./pages/UseRef/LoadingApp";
 
 function App() {
-
   return (
     <>
-      <ScrollAnimation/>
+      <LoadingApp />
     </>
   );
 }

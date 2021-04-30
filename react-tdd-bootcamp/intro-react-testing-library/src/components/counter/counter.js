@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-export default function Counter () {
+export default function Counter() {
   const [counts, setCounts] = useState(0);
 
   return (
@@ -9,4 +9,4 @@ export default function Counter () {
       <p>Clicked times: {counts}</p>
     </>
   );
-};
+}

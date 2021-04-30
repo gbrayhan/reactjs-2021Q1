@@ -1,9 +1,9 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
+import React from "react";
+import { render, screen } from "@testing-library/react";
 
-import HelloWorld from './hello-world';
+import HelloWorld from "./hello-world";
 
-test('renders hello world', () => {
+test("renders hello world", () => {
   render(<HelloWorld />);
   // screen.debug();
 

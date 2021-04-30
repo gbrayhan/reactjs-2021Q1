@@ -1,9 +1,9 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
+import React from "react";
+import { render, screen } from "@testing-library/react";
 
-import AsyncList from './async-list';
+import AsyncList from "./async-list";
 
-test('show the food data', async () => {
+test("show the food data", async () => {
   render(<AsyncList />);
 
   const hamburguer = await screen.findByText(/hamburger/i);

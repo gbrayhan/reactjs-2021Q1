@@ -10,7 +10,7 @@ import usePokeApi from "../../hooks/usePokeApi";
 
 const PokemonDetailHook = (props) => {
   const url = `https://pokeapi.co/api/v2/pokemon/${props.selectedPokemon}`;
-  const [loading, pokemon] = usePokeApi(url, false)
+  const [loading, pokemon] = usePokeApi(url, false);
   return (
     <>
       {!loading && (

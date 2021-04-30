@@ -1,8 +1,8 @@
-import {useCallback, useEffect, useState} from 'react';
+import { useCallback, useEffect, useState } from "react";
 
 const usePokeApi = (url) => {
-  const [pokemon, setPokemon] = useState({})
-  const [loading, setLoading] = useState(false)
+  const [pokemon, setPokemon] = useState({});
+  const [loading, setLoading] = useState(false);
 
   const parseDetail = (data) => {
     const dataPokemon = {
@@ -12,32 +12,30 @@ const usePokeApi = (url) => {
       weight: data.weight,
       type: data.types[0].type.name,
       movesCount: data.moves.length,
-    }
+    };
     return dataPokemon;
-  }
-
+  };
 
   const fetchData = useCallback(async () => {
-    setLoading(true)
+    setLoading(true);
     try {
       const response = await fetch(url);
-      const data = await response.json()
+      const data = await response.json();
 
-      const loadedPokemon = parseDetail(data)
-      setPokemon(loadedPokemon)
+      const loadedPokemon = parseDetail(data);
+      setPokemon(loadedPokemon);
 
-      setLoading(false)
+      setLoading(false);
     } catch (error) {
-      setLoading(false)
+      setLoading(false);
     }
-  }, [url])
+  }, [url]);
 
   useEffect(() => {
-    fetchData().then(r => {
-    })
-  }, [fetchData])
+    fetchData().then((r) => {});
+  }, [fetchData]);
 
   return [loading, pokemon];
-}
+};
 
 export default usePokeApi;
