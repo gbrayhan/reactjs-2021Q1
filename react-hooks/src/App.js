@@ -1,11 +1,11 @@
 import React from "react";
-import CopyApp from "./pages/FocusUseRef/CopyApp";
+import ScrollAnimation from "./pages/UseRef/ScrollAnimation";
 
 function App() {
 
   return (
     <>
-      <CopyApp/>
+      <ScrollAnimation/>
     </>
   );
 }
