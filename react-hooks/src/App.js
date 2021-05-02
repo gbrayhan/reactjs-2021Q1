@@ -1,10 +1,10 @@
 import React from "react";
-import LoadingApp from "./pages/UseRef/LoadingApp";
+import CounterApp from "./curso/CustomHook/CounterApp";
 
 function App() {
   return (
     <>
-      <LoadingApp />
+      <CounterApp/>
     </>
   );
 }
