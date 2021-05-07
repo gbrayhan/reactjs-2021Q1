@@ -1,9 +1,9 @@
-import TodoApp from "./TodoApp";
+import ProductApp from "./ProductApp";
 
 function App() {
   return (
     <div>
-      <TodoApp />
+      <ProductApp />
     </div>
   );
 }

@@ -27,7 +27,7 @@ const reducer = (state, action) => {
 };
 
 const TodoApp = () => {
-  const [todos, dispatch] = useReducer(reducer, initialTodo);
+  const [todos, dispatch] = useReducer(reducer, initialTodo, undefined);
   const [text, setText] = useState("");
   return (
     <div>
