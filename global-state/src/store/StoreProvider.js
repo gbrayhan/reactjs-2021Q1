@@ -1,8 +1,9 @@
 import { createContext, useReducer } from "react";
+import StoreReducer, { initialStore } from "./StoreReducer";
 
 const StoreContext = createContext();
 const StoreProvider = ({ children }) => {
-  const [store, dispatch] = useReducer(reducer, initialState);
+  const [store, dispatch] = useReducer(StoreReducer, initialStore, undefined);
   return (
     <StoreContext.Provider value={[store, dispatch]}>
       {children}
