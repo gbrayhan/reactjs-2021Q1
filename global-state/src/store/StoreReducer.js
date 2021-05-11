@@ -15,10 +15,20 @@ const initialStore = {
 
 const StoreReducer = (state, action) => {
   switch (action.type) {
+    case types.authLogout:
+      return {
+        ...state,
+        user: null,
+      };
+    case types.authLogin:
+      return {
+        ...state,
+        user: { id: action.payload.id, name: action.payload.name },
+      };
     default:
       return state;
   }
 };
 
-export { initialStore };
+export { initialStore, types };
 export default StoreReducer;

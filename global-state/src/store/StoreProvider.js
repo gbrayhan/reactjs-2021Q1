@@ -3,9 +3,10 @@ import StoreReducer, { initialStore } from "./StoreReducer";
 
 const StoreContext = createContext();
 const StoreProvider = ({ children }) => {
-  const [store, dispatch] = useReducer(StoreReducer, initialStore, undefined);
+  const [store, dispatch] = useReducer(StoreReducer, initialStore);
+
   return (
-    <StoreContext.Provider value={[store, dispatch]}>
+    <StoreContext.Provider value={{ store, dispatch }}>
       {children}
     </StoreContext.Provider>
   );
