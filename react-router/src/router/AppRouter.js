@@ -5,6 +5,8 @@ import Home from "../pages/Home";
 import Contact from "../pages/Contact";
 import About from "../pages/About";
 import NotFound from "../pages/NotFound";
+import Profile from "../pages/Profile";
+import Categories from "../pages/Categories";
 
 export default function AppRouter() {
   return (
@@ -14,6 +16,10 @@ export default function AppRouter() {
         <Route exact path="/" component={Home}/>
         <Route exact path="/contact" component={Contact}/>
         <Route exact path="/about" component={About}/>
+        <Route exact path="/profile/:username" component={Profile}/>
+        <Route exact path="/categories" component={Categories}/>
+
+
         <Route exact path="*" component={NotFound}/>
       </Switch>
     </Router>)
