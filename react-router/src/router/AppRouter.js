@@ -16,9 +16,8 @@ export default function AppRouter() {
         <Route exact path="/" component={Home}/>
         <Route exact path="/contact" component={Contact}/>
         <Route exact path="/about" component={About}/>
-        <Route exact path="/profile/:username" component={Profile}/>
-        <Route exact path="/categories" component={Categories}/>
-
+        <Route path="/profile/:username" component={Profile}/>
+        <Route path="/categories" component={Categories}/>
 
         <Route exact path="*" component={NotFound}/>
       </Switch>
