@@ -4,14 +4,13 @@ import Navbar from "../layout/Navbar";
 import Home from "../pages/Home";
 import Contact from "../pages/Contact";
 import About from "../pages/About";
-import NotFound from "../pages/NotFound";
 import Profile from "../pages/Profile";
-import Categories from "../pages/Categories";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Dashboard from "../pages/Dashboard";
 import Payment from "../pages/Payment";
 import PrivateRoute from "./PrivateRoute";
+import CategoriesRouter from "./CategoriesRouter";
 
 export default function AppRouter() {
   return (
@@ -22,7 +21,7 @@ export default function AppRouter() {
         <Route exact path="/contact" component={Contact}/>
         <Route exact path="/about" component={About}/>
         <Route path="/profile/:username" component={Profile}/>
-        <Route path="/categories" component={Categories}/>
+        <Route path="/categories" component={CategoriesRouter}/>
         <Route path="/login" component={Login}/>
         <Route path="/sing-in">
           <Redirect to="/login"/>
@@ -32,7 +31,12 @@ export default function AppRouter() {
         <PrivateRoute path="/dashboard" component={Dashboard}/>
         <PrivateRoute path="/payment" component={Payment}/>
 
-        <Route exact path="*" component={NotFound}/>
+
+        <PrivateRoute path="/404" component={Payment}/>
+        <Route exact path="*">
+          <Redirect to="/404"/>
+        </Route>
+
       </Switch>
     </Router>)
 };
